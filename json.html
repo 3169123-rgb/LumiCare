@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>JSON | LumiCare</title>
+
+    <link rel="stylesheet" href="./estilos.css">
+
+    <style>
+        /* PRESENTACIÓN DE JSON */
+        .json-presentacion {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+            background: #FFFFFF;
+            padding: 35px;
+            border-radius: 20px;
+            box-shadow: 0 8px 25px rgba(64, 49, 58, 0.08);
+            margin-bottom: 40px;
+        }
+
+        .json-presentacion-texto h1 {
+            color: #D96C8A;
+            margin-bottom: 15px;
+        }
+
+        .json-presentacion-texto p {
+            color: #6D6268;
+            line-height: 1.7;
+        }
+
+        .json-presentacion-imagen {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .json-presentacion-imagen img {
+            width: 100%;
+            max-width: 380px;
+            height: 260px;
+            object-fit: cover;
+            border-radius: 20px;
+            display: block;
+            box-shadow: 0 8px 25px rgba(64, 49, 58, 0.15);
+        }
+
+        /* SECCIONES CON IMAGEN */
+        .imagen-seccion {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            align-items: center;
+            margin-top: 25px;
+        }
+
+        .imagen-seccion img {
+            width: 100%;
+            max-width: 400px;
+            height: 240px;
+            object-fit: cover;
+            border-radius: 18px;
+            display: block;
+            margin: auto;
+            box-shadow: 0 8px 25px rgba(64, 49, 58, 0.12);
+        }
+
+        .imagen-seccion-texto {
+            color: #6D6268;
+            line-height: 1.7;
+        }
+
+        /* TARJETAS */
+        .json-cards {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 25px;
+            margin-top: 25px;
+        }
+
+        .json-card {
+            background: #FFFFFF;
+            padding: 25px;
+            border-radius: 18px;
+            box-shadow: 0 8px 20px rgba(64, 49, 58, 0.08);
+        }
+
+        .json-card h3 {
+            color: #D96C8A;
+            margin-bottom: 12px;
+        }
+
+        .json-card p {
+            color: #6D6268;
+            line-height: 1.6;
+        }
+
+        /* CÓDIGO */
+        .codigo-box {
+            background: #FFF8F5;
+            padding: 25px;
+            border-radius: 18px;
+            margin-top: 25px;
+        }
+
+        .codigo-box h3 {
+            color: #D96C8A;
+            margin-bottom: 15px;
+        }
+
+        .codigo-box p {
+            color: #6D6268;
+            line-height: 1.6;
+        }
+
+        /* EJEMPLO */
+        .ejemplo-json {
+            background: #FFFFFF;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 8px 25px rgba(64, 49, 58, 0.08);
+            margin-top: 30px;
+        }
+
+        .ejemplo-json h3 {
+            color: #D96C8A;
+            margin-bottom: 15px;
+        }
+
+        .ejemplo-json p {
+            color: #6D6268;
+            line-height: 1.6;
+        }
+
+        /* FLUJO API */
+        .flujo-api {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .flujo-card {
+            background: #FFFFFF;
+            padding: 25px;
+            text-align: center;
+            border-radius: 18px;
+            box-shadow: 0 8px 20px rgba(64, 49, 58, 0.08);
+        }
+
+        .flujo-card h3 {
+            color: #D96C8A;
+            margin-bottom: 10px;
+        }
+
+        .flujo-card p {
+            color: #6D6268;
+            line-height: 1.5;
+        }
+
+        /* RECURSOS */
+        .recursos-json {
+            background: #FFFFFF;
+            padding: 25px;
+            border-radius: 18px;
+            box-shadow: 0 8px 20px rgba(64, 49, 58, 0.08);
+            margin-top: 35px;
+        }
+
+        .recursos-json h3 {
+            color: #D96C8A;
+            margin-bottom: 12px;
+        }
+
+        .recursos-json li {
+            margin-bottom: 8px;
+            color: #6D6268;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 800px) {
+
+            .json-presentacion,
+            .imagen-seccion,
+            .json-cards {
+                grid-template-columns: 1fr;
+            }
+
+            .json-presentacion-imagen img {
+                max-width: 350px;
+            }
+
+            .flujo-api {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVEGACIÓN -->
+    <header>
+        <nav class="navbar">
+
+            <a class="brand" href="index.html">
+                <span>♡</span> LumiCare
+            </a>
+
+            <div class="nav-links">
+                <a href="index.html">Inicio</a>
+                <a href="javascript.html">JavaScript</a>
+                <a href="jquery.html">jQuery</a>
+                <a class="active" href="json.html">JSON</a>
+                <a href="hosting.html">Hosting</a>
+                <a href="cuestionario.html">Cuestionario</a>
+            </div>
+
+        </nav>
+    </header>
+
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main class="section">
+
+        <!-- TÍTULO + IMAGEN A LA IZQUIERDA -->
+        <section class="json-presentacion">
+
+            <!-- IMAGEN PRINCIPAL A LA IZQUIERDA -->
+            <div class="json-presentacion-imagen">
+
+                <img
+                    src="imagenes/json.jpg"
+                    alt="Ilustración relacionada con JSON"
+                >
+
+            </div>
+
+            <!-- TEXTO A LA DERECHA -->
+            <div class="json-presentacion-texto">
+
+                <span class="badge">Datos y tecnología</span>
+
+                <h1>JSON</h1>
+
+                <p>
+                    JSON significa <strong>JavaScript Object Notation</strong>.
+                    Es un formato utilizado para almacenar y transmitir
+                    información de una manera sencilla y organizada.
+                </p>
+
+                <p>
+                    Es muy utilizado en aplicaciones web porque permite
+                    intercambiar información entre un navegador y un servidor.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ¿QUÉ ES JSON? -->
+        <section class="section">
+
+            <h2>¿Qué es JSON?</h2>
+
+            <div class="information">
+
+                <p>
+                    JSON es un formato de texto utilizado para representar
+                    información estructurada. Su sintaxis está basada en
+                    objetos y pares de clave-valor, por lo que resulta
+                    relativamente fácil de leer tanto para las personas
+                    como para los programas.
+                </p>
+
+                <p>
+                    Aunque su nombre contiene la palabra JavaScript,
+                    JSON puede utilizarse con muchos lenguajes de programación.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ¿POR QUÉ ES IMPORTANTE? -->
+        <section class="section">
+
+            <h2>¿Por qué JSON es importante?</h2>
+
+            <div class="imagen-seccion">
+
+                <div class="imagen-seccion-texto">
+
+                    <p>
+                        JSON se convirtió en un formato muy utilizado
+                        para el intercambio de información en aplicaciones
+                        web y servicios digitales.
+                    </p>
+
+                    <p>
+                        Su estructura sencilla facilita el envío de datos
+                        entre diferentes sistemas y aplicaciones.
+                    </p>
+
+                    <p>
+                        Por ejemplo, una aplicación puede solicitar
+                        información a un servidor y recibir los resultados
+                        organizados en formato JSON.
+                    </p>
+
+                </div>
+
+                <!-- SEGUNDA IMAGEN -->
+                <div>
+                    <img
+                        src="imagenes/pregunta del por que es importante.webp"
+                        alt="Código JSON"
+                    >
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- CLAVE Y VALOR -->
+        <section class="section">
+
+            <h2>Claves y valores</h2>
+
+            <div class="json-cards">
+
+                <div class="json-card">
+
+                    <h3>Clave</h3>
+
+                    <p>
+                        La clave identifica el dato que queremos almacenar.
+                        Por ejemplo: <strong>nombre</strong>,
+                        <strong>edad</strong> o <strong>correo</strong>.
+                    </p>
+
+                </div>
+
+                <div class="json-card">
+
+                    <h3>Valor</h3>
+
+                    <p>
+                        El valor es la información asociada a una clave.
+                        Puede ser texto, número, verdadero o falso,
+                        un objeto o una lista.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="codigo-box">
+
+                <h3>Ejemplo de clave y valor</h3>
+
+                <pre><code>{
+    "nombre": "LumiCare",
+    "categoria": "Bienestar",
+    "activo": true
+}</code></pre>
+
+            </div>
+
+        </section>
+
+
+        <!-- OBJETOS Y ARRAYS -->
+        <section class="section">
+
+            <h2>Objetos y arrays en JSON</h2>
+
+            <div class="json-cards">
+
+                <div class="json-card">
+
+                    <h3>Objetos</h3>
+
+                    <p>
+                        Los objetos se escriben utilizando llaves
+                        <strong>{ }</strong> y contienen pares de
+                        clave y valor.
+                    </p>
+
+                    <pre><code>{
+    "nombre": "Ana",
+    "edad": 16
+}</code></pre>
+
+                </div>
+
+                <div class="json-card">
+
+                    <h3>Arrays</h3>
+
+                    <p>
+                        Los arrays permiten almacenar varios valores
+                        dentro de una lista utilizando corchetes
+                        <strong>[ ]</strong>.
+                    </p>
+
+                    <pre><code>{
+    "colores": [
+        "rosa",
+        "blanco",
+        "crema"
+    ]
+}</code></pre>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- JSON VS OBJETO JAVASCRIPT -->
+        <section class="section">
+
+            <h2>Objeto JavaScript vs JSON</h2>
+
+            <div class="imagen-seccion">
+
+                <!-- TERCERA IMAGEN -->
+                <div>
+
+                    <img
+                        src="imagenes/objetivo de json.jpg"
+                        alt="Comunicación de datos JSON y API"
+                    >
+
+                </div>
+
+                <div class="imagen-seccion-texto">
+
+                    <p>
+                        Aunque JSON y los objetos de JavaScript pueden
+                        parecer similares, no son exactamente lo mismo.
+                    </p>
+
+                    <p>
+                        Un objeto de JavaScript es una estructura que
+                        existe dentro del código y puede utilizarse
+                        directamente por el programa.
+                    </p>
+
+                    <p>
+                        JSON es una representación en formato de texto
+                        que se utiliza principalmente para intercambiar
+                        información.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="codigo-box">
+
+                <h3>Objeto de JavaScript</h3>
+
+                <pre><code>const usuario = {
+    nombre: "Ana",
+    edad: 16
+};</code></pre>
+
+            </div>
+
+            <div class="codigo-box">
+
+                <h3>JSON</h3>
+
+                <pre><code>{
+    "nombre": "Ana",
+    "edad": 16
+}</code></pre>
+
+            </div>
+
+        </section>
+
+
+        <!-- CONVERSIÓN -->
+        <section class="section">
+
+            <h2>Convertir JSON y objetos</h2>
+
+            <div class="json-cards">
+
+                <div class="json-card">
+
+                    <h3>JSON.stringify()</h3>
+
+                    <p>
+                        Convierte un objeto de JavaScript en una cadena
+                        de texto con formato JSON.
+                    </p>
+
+                    <pre><code>const texto = JSON.stringify(usuario);</code></pre>
+
+                </div>
+
+                <div class="json-card">
+
+                    <h3>JSON.parse()</h3>
+
+                    <p>
+                        Convierte una cadena JSON en un objeto que
+                        JavaScript puede utilizar.
+                    </p>
+
+                    <pre><code>const objeto = JSON.parse(texto);</code></pre>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- APIS Y SERVIDORES -->
+        <section class="section">
+
+            <h2>JSON, APIs y servidores</h2>
+
+            <div class="information">
+
+                <p>
+                    JSON es muy utilizado cuando una página web necesita
+                    comunicarse con un servidor mediante una API.
+                </p>
+
+                <p>
+                    Una API puede recibir una solicitud y devolver
+                    información estructurada en formato JSON para que
+                    JavaScript pueda utilizarla y mostrarla en la página.
+                </p>
+
+            </div>
+
+
+            <!-- FLUJO -->
+            <div class="flujo-api">
+
+                <div class="flujo-card">
+
+                    <h3>1. Navegador</h3>
+
+                    <p>
+                        La página realiza una solicitud de información.
+                    </p>
+
+                </div>
+
+                <div class="flujo-card">
+
+                    <h3>2. Servidor</h3>
+
+                    <p>
+                        El servidor procesa la solicitud y prepara
+                        los datos.
+                    </p>
+
+                </div>
+
+                <div class="flujo-card">
+
+                    <h3>3. JSON</h3>
+
+                    <p>
+                        La información puede regresar organizada
+                        en formato JSON.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- EJEMPLO PRÁCTICO -->
+        <section class="ejemplo-json">
+
+            <h3>Ejemplo práctico de JSON</h3>
+
+            <p>
+                Imaginemos que LumiCare necesita enviar información
+                sobre un producto. Los datos podrían representarse así:
+            </p>
+
+            <pre><code>{
+    "producto": "LumiCare Smart",
+    "categoria": "Bienestar",
+    "precio": 49.99,
+    "disponible": true,
+    "caracteristicas": [
+        "Tecnología inteligente",
+        "Diseño moderno",
+        "Fácil de usar"
+    ]
+}</code></pre>
+
+            <p>
+                De esta manera, diferentes aplicaciones pueden interpretar
+                y utilizar la información del producto.
+            </p>
+
+        </section>
+
+
+        <!-- RECURSOS -->
+        <section class="recursos-json">
+
+            <h3>Recursos / Bibliografía</h3>
+
+            <ul>
+                <li>MDN Web Docs - JSON</li>
+                <li>JSON.org</li>
+                <li>W3Schools - JSON</li>
+            </ul>
+
+        </section>
+
+    </main>
+
+
+    <!-- PIE DE PÁGINA -->
+    <footer>
+
+        <p>
+            © 2026 LumiCare - Tecnología para el bienestar
+        </p>
+
+    </footer>
+
+</body>
+</html>

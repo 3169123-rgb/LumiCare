@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Cuestionario Web | LumiCare</title>
+
+    <!-- IMPORTANTE: esta ruta debe ser exactamente así -->
+    <link rel="stylesheet" href="./estilos.css">
+</head>
+
+<body>
+
+    <!-- =================================================
+         NAVEGADOR
+         ================================================= -->
+
+    <header>
+        <nav class="navbar">
+
+            <a class="brand" href="index.html">
+                <span>♡</span> LumiCare
+            </a>
+
+            <div class="nav-links">
+
+                <a href="index.html">Inicio</a>
+
+                <a href="javascript.html">JavaScript</a>
+
+                <a href="jquery.html">jQuery</a>
+
+                <a href="json.html">JSON</a>
+
+                <a href="hosting.html">Hosting</a>
+
+                <a class="active" href="cuestionario.html">
+                    Cuestionario
+                </a>
+
+            </div>
+
+        </nav>
+    </header>
+
+
+    <!-- =================================================
+         CONTENIDO PRINCIPAL
+         ================================================= -->
+
+    <main>
+
+        <section class="page-title">
+
+            <span class="badge">
+                ACTIVIDAD INTERACTIVA
+            </span>
+
+            <h1>Cuestionario Web</h1>
+
+            <p>
+                Pon a prueba tus conocimientos sobre JavaScript,
+                jQuery, JSON, Hosting, Dominios y DNS.
+            </p>
+
+        </section>
+
+
+        <!-- =================================================
+             CUESTIONARIO
+             ================================================= -->
+
+        <section class="section">
+
+            <div class="quiz-card">
+
+                <div class="information">
+
+                    <h2>Comprueba lo aprendido</h2>
+
+                    <p>
+                        Selecciona una respuesta para cada pregunta
+                        y después presiona el botón para conocer tu
+                        resultado.
+                    </p>
+
+                </div>
+
+
+                <form id="quizForm">
+
+
+                    <!-- PREGUNTA 1 -->
+
+                    <div class="question">
+
+                        <h3>
+                            1. ¿Qué es JavaScript?
+                        </h3>
+
+                        <label>
+                            <input
+                                type="radio"
+                                name="q1"
+                                value="correcta"
+                            >
+                            Un lenguaje de programación que permite
+                            agregar interactividad a las páginas web.
+                        </label>
+
+                        <label>
+                            <input
+                                type="radio"
+                                name="q1"
+                                value="incorrecta"
+                            >
+                            Un sistema operativo.
+                        </label>
+
+                        <label>
+                            <input
+                                type="radio"
+                                name="q1"
+                                value="incorrecta"
+                            >
+                            Un tipo de servidor web.
+                        </label>
+
+                    </div>
+
+
+                    <!-- PREGUNTA 2 -->
+
+                    <div class="question">
+
+                        <h3>
+                            2. ¿Qué función cumple principalmente CSS?
+                        </h3>
+
+                        <label>
+                            <input
+                                type="radio"
+                                name="q2"
+                                value="incorrecta"
+                            >
+                            Crear bases de datos.
+                        </label>
+
+                        <label>
+                            <input
+                                type="radio"
+                                name="q2"
+                                value="correcta"
+                            >
+                            Dar estilo y diseño a una página web.
+                        </label>
+
+                        <label>
+                            <input
+                                type="radio"
+                                name="q2"
+                                value="incorrecta"
+                            >
+                            Crear dominios.
+                        </label>
+
+                    </div>
+
+
+                    <!-- PREGUNTA 3 -->
+
+                    <div class="question">
+
+                        <h3>
+                            3. ¿Qué símbolo se utiliza normalmente
+                            para acceder a elementos con jQuery?
+                        </h3>
+
+                        <label>
+                            <input
+                                type="radio"
+                                name="q3"
+                                value="correcta"
+                            >
+                            $
+                        </label>
+
+                        <label>
+                            <input
+                                type="radio"
+                                name="q3"
+                                value="incorrecta"
+                            >
+                            #
+                        </label>
+
+                        <label>
+                            <input
+                                type="radio"
+                                name="q3"
+                                value="incorrecta"
+                            >
+                            @
+                        </label>
+
+                    </div>
+
+
+                    <!-- PREGUNTA 4 -->
+
+                    <div class="question">
+
+                        <h3>
+                            4. ¿Qué significa JSON?
+                        </h3>
+
+                        <label>
+                            <input
+                                type="radio"
+                                name="q4"
+                                value="correcta"
+                            >
+                            JavaScript Object Notation.
+                        </label>
+
+                        <label>
+                            <input
+                                type="radio"
+                                name="q4"
+                                value="incorrecta"
+                            >
+                            Java System Online Network.
+                        </label>
+
+                        <label>
+                            <input
+                                type="radio"
+                                name="q4"
+                                value="incorrecta"
+                            >
+                            JavaScript Operating Node.
+                        </label>
+
+                    </div>
+
+
+                    <!-- PREGUNTA 5 -->
+
+                    <div class="question">
+
+                        <h3>
+                            5. ¿Para qué se utiliza principalmente JSON?
+                        </h3>
+
+                        <label>
+                            <input
+                                type="radio"
+                                name="q5"
+                                value="correcta"
+                            >
+                            Para intercambiar y representar datos.
+                        </label>
+
+                        <label>
+                            <input
+                                type="radio"
+                                name="q5"
+                                value="incorrecta"
+                            >
+                            Para diseñar logotipos.
+                        </label>
+
+                        <label>
+                            <input
+                                type="radio"
+                                name="q5"
+                                value="incorrecta"
+                            >
+                            Para registrar dominios.
+                        </label>
+
+                    </div>
+
+
+                    <!-- PREGUNTA 6 -->
+
+                    <div class="question">
+
+                        <h3>
+                            6. ¿Qué es el Web Hosting?
+                        </h3>
+
+                        <label>
+                            <input
+                                type="radio"
+                                name="q6"
+                                value="correcta"
+                            >
+                            Un servicio que permite almacenar
+                            y publicar sitios web en Internet.
+                        </label>
+
+                        <label>
+                            <input
+                                type="radio"
+                                name="q6"
+                                value="incorrecta"
+                            >
+                            Un lenguaje de programación.
+                        </label>
+
+                        <label>
+                            <input
+                                type="radio"
+                                name="q6"
+                                value="incorrecta"
+                            >
+                            Un navegador web.
+                        </label>
+
+                    </div>
+
+
+                    <!-- PREGUNTA 7 -->
+
+                    <div class="question">
+
+                        <h3>
+                            7. ¿Qué es un dominio?
+                        </h3>
+
+                        <label>
+                            <input
+                                type="radio"
+                                name="q7"
+                                value="correcta"
+                            >
+                            El nombre que identifica un sitio web
+                            en Internet.
+                        </label>
+
+                        <label>
+                            <input
+                                type="radio"
+                                name="q7"
+                                value="incorrecta"
+                            >
+                            Una hoja de estilos.
+                        </label>
+
+                        <label>
+                            <input
+                                type="radio"
+                                name="q7"
+                                value="incorrecta"
+                            >
+                            Un archivo JavaScript.
+                        </label>
+
+                    </div>
+
+
+                    <!-- PREGUNTA 8 -->
+
+                    <div class="question">
+
+                        <h3>
+                            8. ¿Qué significa DNS?
+                        </h3>
+
+                        <label>
+                            <input
+                                type="radio"
+                                name="q8"
+                                value="correcta"
+                            >
+                            Domain Name System.
+                        </label>
+
+                        <label>
+                            <input
+                                type="radio"
+                                name="q8"
+                                value="incorrecta"
+                            >
+                            Digital Network Software.
+                        </label>
+
+                        <label>
+                            <input
+                                type="radio"
+                                name="q8"
+                                value="incorrecta"
+                            >
+                            Data Name Server.
+                        </label>
+
+                    </div>
+
+
+                    <!-- PREGUNTA 9 -->
+
+                    <div class="question">
+
+                        <h3>
+                            9. ¿Cuál de estos es un TLD?
+                        </h3>
+
+                        <label>
+                            <input
+                                type="radio"
+                                name="q9"
+                                value="correcta"
+                            >
+                            .com
+                        </label>
+
+                        <label>
+                            <input
+                                type="radio"
+                                name="q9"
+                                value="incorrecta"
+                            >
+                            .html
+                        </label>
+
+                        <label>
+                            <input
+                                type="radio"
+                                name="q9"
+                                value="incorrecta"
+                            >
+                            .javascript
+                        </label>
+
+                    </div>
+
+
+                    <!-- PREGUNTA 10 -->
+
+                    <div class="question">
+
+                        <h3>
+                            10. ¿Qué herramienta permite desplegar
+                            sitios web conectándolos con GitHub?
+                        </h3>
+
+                        <label>
+                            <input
+                                type="radio"
+                                name="q10"
+                                value="correcta"
+                            >
+                            Vercel
+                        </label>
+
+                        <label>
+                            <input
+                                type="radio"
+                                name="q10"
+                                value="incorrecta"
+                            >
+                            Photoshop
+                        </label>
+
+                        <label>
+                            <input
+                                type="radio"
+                                name="q10"
+                                value="incorrecta"
+                            >
+                            WordPad
+                        </label>
+
+                    </div>
+
+
+                    <!-- BOTÓN -->
+
+                    <button
+                        type="button"
+                        class="btn"
+                        onclick="calificarQuiz()"
+                    >
+                        Calificar cuestionario
+                    </button>
+
+
+                    <!-- RESULTADO -->
+
+                    <div
+                        id="resultado"
+                        class="resultado"
+                        style="display: none;"
+                    ></div>
+
+                </form>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =================================================
+         PIE DE PÁGINA
+         ================================================= -->
+
+    <footer>
+
+        <h3>♡ LumiCare</h3>
+
+        <p>
+            Proyecto de Tecnologías Web
+        </p>
+
+        <p>
+            JavaScript • jQuery • JSON • Hosting • Dominios
+        </p>
+
+    </footer>
+
+
+    <!-- =================================================
+         JAVASCRIPT DEL CUESTIONARIO
+         ================================================= -->
+
+    <script>
+
+        function calificarQuiz() {
+
+            const respuestas = document.querySelectorAll(
+                'input[type="radio"]:checked'
+            );
+
+            const totalPreguntas = 10;
+
+            if (respuestas.length < totalPreguntas) {
+
+                const resultado = document.getElementById("resultado");
+
+                resultado.style.display = "block";
+
+                resultado.innerHTML =
+                    "⚠️ Responde todas las preguntas antes de calificar.";
+
+                return;
+            }
+
+
+            let puntos = 0;
+
+
+            respuestas.forEach(function(respuesta) {
+
+                if (respuesta.value === "correcta") {
+
+                    puntos++;
+
+                }
+
+            });
+
+
+            const resultado =
+                document.getElementById("resultado");
+
+            resultado.style.display = "block";
+
+
+            if (puntos >= 9) {
+
+                resultado.innerHTML =
+                    "🎉 Excelente trabajo. Obtuviste " +
+                    puntos +
+                    " de 10.";
+
+            } else if (puntos >= 7) {
+
+                resultado.innerHTML =
+                    "👏 Muy bien. Obtuviste " +
+                    puntos +
+                    " de 10.";
+
+            } else if (puntos >= 5) {
+
+                resultado.innerHTML =
+                    "👍 Buen intento. Obtuviste " +
+                    puntos +
+                    " de 10. Repasa un poco más los temas.";
+
+            } else {
+
+                resultado.innerHTML =
+                    "📚 Obtuviste " +
+                    puntos +
+                    " de 10. Te recomendamos revisar nuevamente las páginas de investigación.";
+
+            }
+
+        }
+
+    </script>
+
+</body>
+
+</html>

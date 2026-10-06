@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Hosting y Dominios | LumiCare</title>
+
+    <link rel="stylesheet" href="./estilos.css">
+
+    <style>
+        /* PRESENTACIÓN */
+        .hosting-presentacion {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+            background: #FFFFFF;
+            padding: 35px;
+            border-radius: 20px;
+            box-shadow: 0 8px 25px rgba(64, 49, 58, 0.08);
+            margin-bottom: 40px;
+        }
+
+        .hosting-presentacion-texto h1 {
+            color: #D96C8A;
+            margin-bottom: 15px;
+        }
+
+        .hosting-presentacion-texto p {
+            color: #6D6268;
+            line-height: 1.7;
+        }
+
+        .hosting-presentacion-imagen {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .hosting-presentacion-imagen img {
+            width: 100%;
+            max-width: 380px;
+            height: 260px;
+            object-fit: cover;
+            border-radius: 20px;
+            display: block;
+            box-shadow: 0 8px 25px rgba(64, 49, 58, 0.15);
+        }
+
+        /* SECCIONES CON IMAGEN */
+        .imagen-seccion {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            align-items: center;
+            margin-top: 25px;
+        }
+
+        .imagen-seccion img {
+            width: 100%;
+            max-width: 400px;
+            height: 240px;
+            object-fit: cover;
+            border-radius: 18px;
+            display: block;
+            margin: auto;
+            box-shadow: 0 8px 25px rgba(64, 49, 58, 0.12);
+        }
+
+        .imagen-seccion-texto {
+            color: #6D6268;
+            line-height: 1.7;
+        }
+
+        /* TARJETAS */
+        .hosting-cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+            margin-top: 25px;
+        }
+
+        .hosting-card {
+            background: #FFFFFF;
+            padding: 25px;
+            border-radius: 18px;
+            box-shadow: 0 8px 20px rgba(64, 49, 58, 0.08);
+        }
+
+        .hosting-card h3 {
+            color: #D96C8A;
+            margin-bottom: 12px;
+        }
+
+        .hosting-card p {
+            color: #6D6268;
+            line-height: 1.6;
+        }
+
+        /* VERCEL */
+        .vercel-box {
+            background: #FFF8F5;
+            padding: 30px;
+            border-radius: 20px;
+            margin-top: 30px;
+        }
+
+        .vercel-box h3 {
+            color: #D96C8A;
+            margin-bottom: 15px;
+        }
+
+        .vercel-box p {
+            color: #6D6268;
+            line-height: 1.7;
+        }
+
+        /* DOMINIOS */
+        .dominio-cards {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 25px;
+            margin-top: 25px;
+        }
+
+        .dominio-card {
+            background: #FFFFFF;
+            padding: 25px;
+            border-radius: 18px;
+            box-shadow: 0 8px 20px rgba(64, 49, 58, 0.08);
+        }
+
+        .dominio-card h3 {
+            color: #D96C8A;
+            margin-bottom: 12px;
+        }
+
+        .dominio-card p {
+            color: #6D6268;
+            line-height: 1.6;
+        }
+
+        /* EJEMPLOS */
+        .ejemplo-dominio {
+            background: #FFFFFF;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 8px 25px rgba(64, 49, 58, 0.08);
+            margin-top: 30px;
+        }
+
+        .ejemplo-dominio h3 {
+            color: #D96C8A;
+            margin-bottom: 15px;
+        }
+
+        .ejemplo-dominio p {
+            color: #6D6268;
+            line-height: 1.7;
+        }
+
+        .dominio-ejemplo {
+            background: #FFF8F5;
+            padding: 20px;
+            border-radius: 12px;
+            text-align: center;
+            font-size: 20px;
+            font-weight: bold;
+            color: #40313A;
+            margin-top: 20px;
+        }
+
+        /* DNS */
+        .dns-pasos {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .dns-card {
+            background: #FFFFFF;
+            padding: 25px;
+            text-align: center;
+            border-radius: 18px;
+            box-shadow: 0 8px 20px rgba(64, 49, 58, 0.08);
+        }
+
+        .dns-card h3 {
+            color: #D96C8A;
+            margin-bottom: 10px;
+        }
+
+        .dns-card p {
+            color: #6D6268;
+            line-height: 1.5;
+        }
+
+        /* RECURSOS */
+        .recursos-hosting {
+            background: #FFFFFF;
+            padding: 25px;
+            border-radius: 18px;
+            box-shadow: 0 8px 20px rgba(64, 49, 58, 0.08);
+            margin-top: 35px;
+        }
+
+        .recursos-hosting h3 {
+            color: #D96C8A;
+            margin-bottom: 12px;
+        }
+
+        .recursos-hosting li {
+            margin-bottom: 8px;
+            color: #6D6268;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 800px) {
+
+            .hosting-presentacion,
+            .imagen-seccion,
+            .dominio-cards {
+                grid-template-columns: 1fr;
+            }
+
+            .hosting-cards,
+            .dns-pasos {
+                grid-template-columns: 1fr;
+            }
+
+            .hosting-presentacion-imagen img {
+                max-width: 350px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVEGACIÓN -->
+    <header>
+        <nav class="navbar">
+
+            <a class="brand" href="index.html">
+                <span>♡</span> LumiCare
+            </a>
+
+            <div class="nav-links">
+                <a href="index.html">Inicio</a>
+                <a href="javascript.html">JavaScript</a>
+                <a href="jquery.html">jQuery</a>
+                <a href="json.html">JSON</a>
+                <a class="active" href="hosting.html">Hosting</a>
+                <a href="cuestionario.html">Cuestionario</a>
+            </div>
+
+        </nav>
+    </header>
+
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main class="section">
+
+        <!-- TÍTULO + IMAGEN A LA DERECHA -->
+        <section class="hosting-presentacion">
+
+            <div class="hosting-presentacion-texto">
+
+                <span class="badge">Publicación web</span>
+
+                <h1>Hosting y Dominios</h1>
+
+                <p>
+                    El hosting y los dominios son elementos importantes
+                    para publicar un sitio web y permitir que otras
+                    personas puedan acceder a él mediante Internet.
+                </p>
+
+                <p>
+                    El hosting almacena los archivos de una página web,
+                    mientras que el dominio funciona como una dirección
+                    que permite encontrar ese sitio.
+                </p>
+
+            </div>
+
+            <!-- IMAGEN PRINCIPAL A LA DERECHA -->
+            <div class="hosting-presentacion-imagen">
+
+                <img
+                    src="imagenes/Hosting y Dominios.webp"
+                    alt="Ilustración de hosting web"
+                >
+
+            </div>
+
+        </section>
+
+
+        <!-- ¿QUÉ ES HOSTING? -->
+        <section class="section">
+
+            <h2>¿Qué es el hosting?</h2>
+
+            <div class="imagen-seccion">
+
+                <div class="imagen-seccion-texto">
+
+                    <p>
+                        El hosting, también llamado alojamiento web,
+                        es un servicio que proporciona espacio y recursos
+                        en un servidor para almacenar los archivos de
+                        un sitio web.
+                    </p>
+
+                    <p>
+                        Cuando una persona visita una página web,
+                        el navegador solicita los archivos al servidor
+                        donde está alojado el sitio.
+                    </p>
+
+                    <p>
+                        De esta forma, el contenido puede estar disponible
+                        para los usuarios a través de Internet.
+                    </p>
+
+                </div>
+
+                <!-- SEGUNDA IMAGEN -->
+                <div>
+
+                    <img
+                        src="imagenes/Qué es el hosting.webp"
+                        alt="Servidor y alojamiento web"
+                    >
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- TIPOS DE HOSTING -->
+        <section class="section">
+
+            <h2>Tipos de hosting</h2>
+
+            <div class="hosting-cards">
+
+                <div class="hosting-card">
+
+                    <h3>Hosting compartido</h3>
+
+                    <p>
+                        Varios sitios web utilizan recursos de un mismo
+                        servidor. Es una opción sencilla para proyectos
+                        pequeños y sitios que no necesitan muchos recursos.
+                    </p>
+
+                </div>
+
+                <div class="hosting-card">
+
+                    <h3>VPS</h3>
+
+                    <p>
+                        Un servidor privado virtual proporciona recursos
+                        asignados a un proyecto dentro de un servidor físico.
+                        Ofrece mayor control que un hosting compartido.
+                    </p>
+
+                </div>
+
+                <div class="hosting-card">
+
+                    <h3>Cloud Hosting</h3>
+
+                    <p>
+                        Utiliza recursos distribuidos en diferentes
+                        servidores. Puede ofrecer flexibilidad y capacidad
+                        para adaptarse a diferentes necesidades.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- VERCEL -->
+        <section class="section">
+
+            <h2>Vercel para sitios estáticos</h2>
+
+            <div class="vercel-box">
+
+                <h3>¿Qué es Vercel?</h3>
+
+                <p>
+                    Vercel es una plataforma utilizada para desplegar
+                    aplicaciones y sitios web. Es especialmente práctica
+                    para proyectos desarrollados con tecnologías web
+                    como HTML, CSS y JavaScript.
+                </p>
+
+                <p>
+                    Para un proyecto como LumiCare, un sitio compuesto
+                    por archivos HTML, CSS, JavaScript e imágenes puede
+                    publicarse en una plataforma de este tipo.
+                </p>
+
+                <p>
+                    Después del despliegue, el proyecto puede quedar
+                    disponible mediante una dirección web.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ¿QUÉ ES UN DOMINIO? -->
+        <section class="section">
+
+            <h2>¿Qué es un dominio?</h2>
+
+            <div class="imagen-seccion">
+
+                <!-- TERCERA IMAGEN -->
+                <div>
+
+                    <img
+                        src="imagenes/Qué es un dominio.webp"
+                        alt="Dominio y sistema DNS"
+                    >
+
+                </div>
+
+                <div class="imagen-seccion-texto">
+
+                    <p>
+                        Un dominio es una dirección fácil de recordar
+                        que permite acceder a un sitio web.
+                    </p>
+
+                    <p>
+                        En lugar de tener que recordar una dirección
+                        numérica del servidor, los usuarios pueden
+                        utilizar un nombre de dominio.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- PARTES DEL DOMINIO -->
+        <section class="section">
+
+            <h2>Partes de un dominio</h2>
+
+            <div class="dominio-cards">
+
+                <div class="dominio-card">
+
+                    <h3>Nombre de dominio</h3>
+
+                    <p>
+                        Es la parte principal que identifica al sitio.
+                        Por ejemplo, en <strong>lumicare.com</strong>,
+                        "lumicare" es el nombre elegido.
+                    </p>
+
+                </div>
+
+                <div class="dominio-card">
+
+                    <h3>TLD</h3>
+
+                    <p>
+                        TLD significa <strong>Top-Level Domain</strong>.
+                        Es la terminación del dominio, como
+                        <strong>.com</strong>, <strong>.org</strong>
+                        o <strong>.net</strong>.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="ejemplo-dominio">
+
+                lumicare.com
+
+            </div>
+
+        </section>
+
+
+        <!-- SUBDOMINIOS -->
+        <section class="section">
+
+            <h2>¿Qué es un subdominio?</h2>
+
+            <div class="information">
+
+                <p>
+                    Un subdominio es una parte adicional que se coloca
+                    antes del dominio principal. Puede utilizarse para
+                    organizar diferentes áreas de un sitio web.
+                </p>
+
+            </div>
+
+            <div class="ejemplo-dominio">
+
+                blog.lumicare.com
+
+            </div>
+
+            <div class="information">
+
+                <p>
+                    En este ejemplo, <strong>blog</strong> sería el
+                    subdominio y <strong>lumicare.com</strong> sería
+                    el dominio principal.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- DNS -->
+        <section class="section">
+
+            <h2>¿Qué es DNS?</h2>
+
+            <div class="information">
+
+                <p>
+                    DNS significa <strong>Domain Name System</strong>.
+                    Su función principal es ayudar a relacionar los
+                    nombres de dominio con las direcciones de los
+                    servidores correspondientes.
+                </p>
+
+                <p>
+                    Gracias al DNS, los usuarios pueden escribir un
+                    nombre de dominio en lugar de tener que recordar
+                    directamente una dirección IP.
+                </p>
+
+            </div>
+
+            <div class="dns-pasos">
+
+                <div class="dns-card">
+
+                    <h3>1. Usuario</h3>
+
+                    <p>
+                        Escribe un dominio en el navegador.
+                    </p>
+
+                </div>
+
+                <div class="dns-card">
+
+                    <h3>2. DNS</h3>
+
+                    <p>
+                        El sistema busca la información asociada
+                        al dominio.
+                    </p>
+
+                </div>
+
+                <div class="dns-card">
+
+                    <h3>3. Servidor</h3>
+
+                    <p>
+                        El navegador puede conectarse con el servidor
+                        correspondiente.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- PROPAGACIÓN DNS -->
+        <section class="section">
+
+            <h2>Propagación DNS</h2>
+
+            <div class="information">
+
+                <p>
+                    Cuando se realizan cambios en la configuración
+                    DNS de un dominio, la información puede tardar
+                    un tiempo en actualizarse en diferentes servidores
+                    y redes de Internet.
+                </p>
+
+                <p>
+                    Este proceso se conoce como propagación DNS.
+                    Durante este período, algunos usuarios pueden
+                    recibir la información anterior mientras otros
+                    ya reciben la nueva configuración.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- RELACIÓN HOSTING Y DOMINIO -->
+        <section class="section">
+
+            <h2>Hosting + dominio</h2>
+
+            <div class="hosting-cards">
+
+                <div class="hosting-card">
+
+                    <h3>Hosting</h3>
+
+                    <p>
+                        Guarda los archivos y recursos necesarios
+                        para que el sitio web funcione.
+                    </p>
+
+                </div>
+
+                <div class="hosting-card">
+
+                    <h3>Dominio</h3>
+
+                    <p>
+                        Proporciona una dirección fácil de recordar
+                        para acceder al sitio.
+                    </p>
+
+                </div>
+
+                <div class="hosting-card">
+
+                    <h3>Sitio web</h3>
+
+                    <p>
+                        Es el resultado que el usuario puede visitar
+                        desde un navegador utilizando el dominio.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- RECURSOS -->
+        <section class="recursos-hosting">
+
+            <h3>Recursos / Bibliografía</h3>
+
+            <ul>
+                <li>Vercel Documentation</li>
+                <li>MDN Web Docs - HTTP y Web</li>
+                <li>ICANN - Domain Names</li>
+                <li>Cloudflare Learning Center - DNS</li>
+            </ul>
+
+        </section>
+
+    </main>
+
+
+    <!-- PIE DE PÁGINA -->
+    <footer>
+
+        <p>
+            © 2026 LumiCare - Tecnología para el bienestar
+        </p>
+
+    </footer>
+
+</body>
+</html>

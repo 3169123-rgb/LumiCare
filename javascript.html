@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>LumiCare | JavaScript</title>
+
+    <link rel="stylesheet" href="./estilos.css">
+
+    <style>
+
+        /* =================================
+           IMAGEN PRINCIPAL DE JAVASCRIPT
+        ================================= */
+
+        .javascript-presentacion {
+            display: grid;
+            grid-template-columns: 0.9fr 1.1fr;
+            gap: 35px;
+            align-items: center;
+
+            background: #FFFFFF;
+            padding: 30px;
+            border-radius: 20px;
+
+            box-shadow: 0 8px 25px rgba(64, 49, 58, 0.08);
+
+            margin-bottom: 35px;
+
+            transition: transform 0.4s ease,
+                        box-shadow 0.4s ease;
+        }
+
+        .javascript-presentacion:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(64, 49, 58, 0.13);
+        }
+
+        .javascript-imagen {
+            width: 100%;
+            max-width: 360px;
+            height: 250px;
+
+            object-fit: cover;
+
+            border-radius: 18px;
+
+            display: block;
+            margin: auto;
+
+            box-shadow: 0 8px 20px rgba(64, 49, 58, 0.15);
+
+            transition: transform 0.5s ease;
+        }
+
+        .javascript-imagen:hover {
+            transform: scale(1.04);
+        }
+
+
+        /* =================================
+           IMAGEN HTML CSS JAVASCRIPT
+        ================================= */
+
+        .imagen-tecnologias {
+            width: 100%;
+            max-width: 700px;
+            height: 250px;
+
+            object-fit: cover;
+
+            border-radius: 18px;
+
+            display: block;
+            margin: 25px auto;
+
+            box-shadow: 0 8px 20px rgba(64, 49, 58, 0.12);
+
+            transition: transform 0.5s ease;
+        }
+
+        .imagen-tecnologias:hover {
+            transform: scale(1.02);
+        }
+
+
+        /* =================================
+           IMAGEN EJEMPLO PRÁCTICO
+        ================================= */
+
+        .imagen-codigo {
+            width: 100%;
+            max-width: 600px;
+            height: 220px;
+
+            object-fit: cover;
+
+            border-radius: 18px;
+
+            display: block;
+            margin: 20px auto;
+
+            box-shadow: 0 8px 20px rgba(64, 49, 58, 0.12);
+
+            transition: transform 0.5s ease;
+        }
+
+        .imagen-codigo:hover {
+            transform: translateY(-4px);
+        }
+
+
+        /* =================================
+           TRANSICIÓN DE LAS TARJETAS
+        ================================= */
+
+        .comparison > div {
+            transition: transform 0.3s ease,
+                        box-shadow 0.3s ease;
+        }
+
+        .comparison > div:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(64, 49, 58, 0.10);
+        }
+
+
+        /* =================================
+           ADAPTACIÓN PARA CELULAR
+        ================================= */
+
+        @media (max-width: 700px) {
+
+            .javascript-presentacion {
+                grid-template-columns: 1fr;
+            }
+
+            .javascript-imagen {
+                max-width: 100%;
+                height: 220px;
+            }
+
+            .imagen-tecnologias {
+                height: 200px;
+            }
+
+            .imagen-codigo {
+                height: 180px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================
+         MENÚ DE NAVEGACIÓN
+    ========================== -->
+
+    <header>
+
+        <nav class="navbar">
+
+            <a class="brand" href="index.html">
+                <span>♡</span> LumiCare
+            </a>
+
+            <div class="nav-links">
+
+                <a href="index.html">
+                    Inicio
+                </a>
+
+                <a class="active" href="javascript.html">
+                    JavaScript
+                </a>
+
+                <a href="jquery.html">
+                    jQuery
+                </a>
+
+                <a href="json.html">
+                    JSON
+                </a>
+
+                <a href="hosting.html">
+                    Hosting
+                </a>
+
+                <a href="cuestionario.html">
+                    Cuestionario
+                </a>
+
+            </div>
+
+        </nav>
+
+    </header>
+
+
+
+    <!-- =========================
+         CONTENIDO
+    ========================== -->
+
+    <main>
+
+        <section class="section">
+
+            <!-- =================================
+                 PRESENTACIÓN JAVASCRIPT
+            ================================== -->
+
+            <div class="javascript-presentacion">
+
+
+                <!-- IMAGEN A LA IZQUIERDA -->
+
+                <div>
+
+                    <img
+                        src="imagenes/Javascri, titulo.jpg!bw700"
+                        alt="Programación con JavaScript"
+                        class="javascript-imagen"
+                    >
+
+                </div>
+
+
+                <!-- INFORMACIÓN A LA DERECHA -->
+
+                <div>
+
+                    <span class="badge">
+                        TECNOLOGÍA 01
+                    </span>
+
+                    <h1 class="page-title">
+                        JavaScript
+                    </h1>
+
+                    <p>
+                        El lenguaje que permite agregar interactividad
+                        a las páginas web.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =================================
+                 ¿QUÉ ES JAVASCRIPT?
+            ================================== -->
+
+            <div class="info">
+
+                <h3>
+                    ¿Qué es JavaScript?
+                </h3>
+
+                <p>
+                    JavaScript es un lenguaje de programación utilizado
+                    principalmente para agregar comportamiento e
+                    interactividad a las páginas web.
+                </p>
+
+                <p>
+                    Con JavaScript podemos hacer que los botones respondan
+                    a acciones, cambiar contenido, validar formularios,
+                    mostrar mensajes y realizar diferentes funciones.
+                </p>
+
+            </div>
+
+
+
+            <br>
+
+
+
+            <!-- =================================
+                 HTML VS CSS VS JAVASCRIPT
+            ================================== -->
+
+            <h2>
+                HTML vs CSS vs JavaScript
+            </h2>
+
+
+            <!-- IMAGEN AGREGADA -->
+
+            <img
+                src="imagenes/imagen 2 de javascrip.jpg"
+                alt="HTML CSS y JavaScript"
+                class="imagen-tecnologias"
+            >
+
+
+            <div class="comparison">
+
+
+                <div>
+
+                    <h3>
+                        HTML
+                    </h3>
+
+                    <p>
+                        Crea la estructura y los elementos
+                        de una página web.
+                    </p>
+
+                </div>
+
+
+                <div>
+
+                    <h3>
+                        CSS
+                    </h3>
+
+                    <p>
+                        Se encarga del diseño, colores,
+                        tamaños y presentación.
+                    </p>
+
+                </div>
+
+
+                <div>
+
+                    <h3>
+                        JavaScript
+                    </h3>
+
+                    <p>
+                        Agrega comportamiento e interactividad.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <br>
+
+
+
+            <!-- =================================
+                 VARIABLES FUNCIONES Y EVENTOS
+            ================================== -->
+
+            <h2>
+                Variables, funciones y eventos
+            </h2>
+
+
+            <div class="comparison">
+
+
+                <!-- VARIABLES -->
+
+                <div>
+
+                    <h3>
+                        Variables
+                    </h3>
+
+                    <p>
+                        Guardan información que puede utilizar
+                        el programa.
+                    </p>
+
+                    <pre><code>let nombre = "LumiCare";</code></pre>
+
+                </div>
+
+
+                <!-- FUNCIONES -->
+
+                <div>
+
+                    <h3>
+                        Funciones
+                    </h3>
+
+                    <p>
+                        Son bloques de código que realizan
+                        una tarea.
+                    </p>
+
+                    <pre><code>function saludar() {
+    alert("Hola");
+}</code></pre>
+
+                </div>
+
+
+                <!-- EVENTOS -->
+
+                <div>
+
+                    <h3>
+                        Eventos
+                    </h3>
+
+                    <p>
+                        Ejecutan una acción cuando ocurre
+                        algo como un clic.
+                    </p>
+
+                    <pre><code>button.addEventListener("click", funcion);</code></pre>
+
+                </div>
+
+            </div>
+
+
+
+            <br>
+
+
+
+            <!-- =================================
+                 EJEMPLO PRÁCTICO
+            ================================== -->
+
+            <div class="demo">
+
+                <h2>
+                    Ejemplo práctico de JavaScript
+                </h2>
+
+
+                <!-- IMAGEN AGREGADA -->
+
+                <img
+                    src="imagenes/ejemplo de java.webp"
+                    alt="Código JavaScript"
+                    class="imagen-codigo"
+                >
+
+
+                <p id="mensajeJS">
+                    Presiona el botón para cambiar este mensaje.
+                </p>
+
+
+                <br>
+
+
+                <button
+                    class="button"
+                    onclick="cambiarMensaje()"
+                >
+                    Probar JavaScript
+                </button>
+
+
+                <pre><code>function cambiarMensaje() {
+    document.getElementById("mensajeJS").textContent =
+    "¡JavaScript está funcionando!";
+}</code></pre>
+
+
+                <p>
+
+                    <strong>
+                        Explicación:
+                    </strong>
+
+                    la función busca el elemento que tiene
+                    el identificador
+
+                    <strong>
+                        mensajeJS
+                    </strong>
+
+                    y cambia su contenido.
+
+                </p>
+
+            </div>
+
+
+
+            <!-- =================================
+                 RECURSOS
+            ================================== -->
+
+            <div class="resources">
+
+                <h3>
+                    Recursos / Bibliografía
+                </h3>
+
+                <ul>
+
+                    <li>
+                        MDN Web Docs - JavaScript
+                    </li>
+
+                    <li>
+                        W3Schools - JavaScript
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+
+    <footer>
+
+        <p>
+            © 2026 LumiCare | Tecnologías Web
+        </p>
+
+    </footer>
+
+
+
+    <!-- =========================
+         JAVASCRIPT
+    ========================== -->
+
+    <script>
+
+        function cambiarMensaje() {
+
+            const mensaje =
+                document.getElementById("mensajeJS");
+
+            mensaje.textContent =
+                "¡JavaScript está funcionando correctamente en LumiCare!";
+
+        }
+
+    </script>
+
+
+</body>
+
+</html>

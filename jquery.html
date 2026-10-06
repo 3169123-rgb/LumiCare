@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>jQuery | LumiCare</title>
+
+    <link rel="stylesheet" href="./estilos.css">
+
+    <style>
+        /* PRESENTACIÓN DE JQUERY */
+        .jquery-presentacion {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+            background: #FFFFFF;
+            padding: 35px;
+            border-radius: 20px;
+            box-shadow: 0 8px 25px rgba(64, 49, 58, 0.08);
+            margin-bottom: 40px;
+        }
+
+        .jquery-presentacion-texto h1 {
+            color: #D96C8A;
+            margin-bottom: 15px;
+        }
+
+        .jquery-presentacion-texto p {
+            color: #6D6268;
+            line-height: 1.7;
+        }
+
+        .jquery-presentacion-imagen {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .jquery-presentacion-imagen img {
+            width: 100%;
+            max-width: 380px;
+            height: 260px;
+            object-fit: cover;
+            border-radius: 20px;
+            display: block;
+            box-shadow: 0 8px 25px rgba(64, 49, 58, 0.15);
+        }
+
+        /* ESPACIOS PARA IMÁGENES */
+        .imagen-seccion {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            align-items: center;
+            margin-top: 25px;
+        }
+
+        .imagen-seccion img {
+            width: 100%;
+            max-width: 400px;
+            height: 240px;
+            object-fit: cover;
+            border-radius: 18px;
+            display: block;
+            margin: auto;
+            box-shadow: 0 8px 25px rgba(64, 49, 58, 0.12);
+        }
+
+        .imagen-seccion-texto {
+            color: #6D6268;
+            line-height: 1.7;
+        }
+
+        /* TARJETAS DE VENTAJAS */
+        .jquery-cards {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 25px;
+            margin-top: 25px;
+        }
+
+        .jquery-card {
+            background: #FFFFFF;
+            padding: 25px;
+            border-radius: 18px;
+            box-shadow: 0 8px 20px rgba(64, 49, 58, 0.08);
+        }
+
+        .jquery-card h3 {
+            color: #D96C8A;
+            margin-bottom: 12px;
+        }
+
+        .jquery-card p {
+            color: #6D6268;
+            line-height: 1.6;
+        }
+
+        /* CÓDIGO */
+        .codigo-box {
+            background: #FFF8F5;
+            padding: 25px;
+            border-radius: 18px;
+            margin-top: 25px;
+        }
+
+        .codigo-box h3 {
+            color: #D96C8A;
+            margin-bottom: 15px;
+        }
+
+        /* DEMOSTRACIONES */
+        .demo-jquery {
+            background: #FFFFFF;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 8px 25px rgba(64, 49, 58, 0.08);
+            margin-top: 30px;
+        }
+
+        .demo-jquery h3 {
+            color: #D96C8A;
+            margin-bottom: 15px;
+        }
+
+        .demo-jquery p {
+            color: #6D6268;
+            line-height: 1.6;
+        }
+
+        .demo-button {
+            background: #D96C8A;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 10px;
+            cursor: pointer;
+            margin: 8px 5px 8px 0;
+            font-size: 15px;
+        }
+
+        .demo-button:hover {
+            opacity: 0.85;
+        }
+
+        .caja-demo {
+            background: #F3B6C6;
+            color: #40313A;
+            padding: 25px;
+            border-radius: 15px;
+            margin: 20px 0;
+            text-align: center;
+        }
+
+        /* RECURSOS */
+        .recursos-jquery {
+            background: #FFFFFF;
+            padding: 25px;
+            border-radius: 18px;
+            box-shadow: 0 8px 20px rgba(64, 49, 58, 0.08);
+            margin-top: 35px;
+        }
+
+        .recursos-jquery h3 {
+            color: #D96C8A;
+            margin-bottom: 12px;
+        }
+
+        .recursos-jquery li {
+            margin-bottom: 8px;
+            color: #6D6268;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 800px) {
+            .jquery-presentacion,
+            .imagen-seccion,
+            .jquery-cards {
+                grid-template-columns: 1fr;
+            }
+
+            .jquery-presentacion-imagen {
+                order: -1;
+            }
+
+            .jquery-presentacion-imagen img {
+                max-width: 350px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVEGACIÓN -->
+    <header>
+        <nav class="navbar">
+
+            <a class="brand" href="index.html">
+                <span>♡</span> LumiCare
+            </a>
+
+            <div class="nav-links">
+                <a href="index.html">Inicio</a>
+                <a href="javascript.html">JavaScript</a>
+                <a class="active" href="jquery.html">jQuery</a>
+                <a href="json.html">JSON</a>
+                <a href="hosting.html">Hosting</a>
+                <a href="cuestionario.html">Cuestionario</a>
+            </div>
+
+        </nav>
+    </header>
+
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main class="section">
+
+        <!-- TÍTULO + IMAGEN A LA DERECHA -->
+        <section class="jquery-presentacion">
+
+            <div class="jquery-presentacion-texto">
+
+                <span class="badge">Tecnología web</span>
+
+                <h1>jQuery</h1>
+
+                <p>
+                    jQuery es una biblioteca de JavaScript creada para
+                    facilitar el desarrollo de páginas web interactivas.
+                    Permite realizar diferentes tareas utilizando una
+                    sintaxis más sencilla y corta.
+                </p>
+
+                <p>
+                    Con jQuery se pueden seleccionar elementos HTML,
+                    modificar contenido, responder a eventos y crear
+                    animaciones de una manera práctica.
+                </p>
+
+            </div>
+
+            <!-- IMAGEN PRINCIPAL A LA DERECHA -->
+            <div class="jquery-presentacion-imagen">
+
+                <img
+                    src="imagenes/jQuery tema.webp"
+                    alt="Ilustración relacionada con jQuery"
+                >
+
+            </div>
+
+        </section>
+
+
+        <!-- ¿QUÉ ES JQUERY? -->
+        <section class="section">
+
+            <h2>¿Qué es jQuery?</h2>
+
+            <div class="information">
+
+                <p>
+                    jQuery es una biblioteca de JavaScript de código
+                    abierto. Fue diseñada para simplificar tareas
+                    comunes del desarrollo web, como manipular el
+                    contenido de una página, trabajar con eventos,
+                    realizar animaciones y comunicarse con servidores.
+                </p>
+
+                <p>
+                    Su sintaxis permite escribir determinadas operaciones
+                    con menos código que utilizando JavaScript tradicional.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ¿POR QUÉ FUE CREADO? -->
+        <section class="section">
+
+            <h2>¿Por qué nació jQuery?</h2>
+
+            <div class="imagen-seccion">
+
+                <div class="imagen-seccion-texto ">
+
+                    <p>
+                        jQuery apareció para facilitar el desarrollo
+                        de aplicaciones web y reducir algunas diferencias
+                        entre los navegadores de la época.
+                    </p>
+
+                    <p>
+                        Su objetivo era proporcionar una forma más sencilla
+                        de seleccionar elementos, manejar eventos,
+                        realizar animaciones y trabajar con páginas web
+                        dinámicas.
+                    </p>
+
+                </div>
+
+                <!-- SEGUNDA IMAGEN -->
+                <div>
+                    <img
+                        src="imagenes/pregunta donde nacio"
+                        alt="Código relacionado con jQuery"
+                    >
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- SINTAXIS $ -->
+        <section class="section">
+
+            <h2>La sintaxis $ de jQuery</h2>
+
+            <div class="jquery-cards">
+
+                <div class="jquery-card">
+
+                    <h3>El símbolo $</h3>
+
+                    <p>
+                        Una de las características más conocidas de jQuery
+                        es el uso del símbolo <strong>$</strong>.
+                        Este símbolo permite acceder a las funciones
+                        principales de la biblioteca.
+                    </p>
+
+                </div>
+
+                <div class="jquery-card">
+
+                    <h3>Seleccionar elementos</h3>
+
+                    <p>
+                        jQuery permite seleccionar elementos HTML mediante
+                        selectores similares a los utilizados en CSS.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="codigo-box">
+
+                <h3>Ejemplo básico</h3>
+
+                <pre><code>$("#mensaje").text("Hola desde jQuery");</code></pre>
+
+                <p>
+                    En este ejemplo, jQuery busca el elemento que tiene
+                    el identificador <strong>mensaje</strong> y cambia
+                    su contenido.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- VENTAJAS Y DESVENTAJAS -->
+        <section class="section">
+
+            <h2>Ventajas y desventajas de jQuery</h2>
+
+            <div class="jquery-cards">
+
+                <div class="jquery-card">
+
+                    <h3>✓ Ventajas</h3>
+
+                    <p>
+                        • Sintaxis sencilla.<br>
+                        • Facilita la manipulación del DOM.<br>
+                        • Permite manejar eventos fácilmente.<br>
+                        • Incluye métodos para animaciones.<br>
+                        • Fue muy utilizado en proyectos web.
+                    </p>
+
+                </div>
+
+                <div class="jquery-card">
+
+                    <h3>✗ Desventajas</h3>
+
+                    <p>
+                        • Puede agregar una dependencia adicional
+                        al proyecto.<br>
+                        • Muchas funciones modernas de JavaScript
+                        ya pueden realizarse sin jQuery.<br>
+                        • En proyectos nuevos puede no ser necesario.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- JQUERY VS JAVASCRIPT -->
+        <section class="section">
+
+            <h2>jQuery vs JavaScript moderno</h2>
+
+            <div class="information">
+
+                <p>
+                    JavaScript moderno incluye muchas funciones que
+                    anteriormente eran más complicadas de realizar
+                    de manera compatible entre navegadores.
+                </p>
+
+                <p>
+                    Por esta razón, actualmente muchas tareas que antes
+                    se realizaban con jQuery pueden hacerse directamente
+                    con JavaScript utilizando métodos modernos del DOM.
+                </p>
+
+            </div>
+
+            <div class="codigo-box">
+
+                <h3>JavaScript moderno</h3>
+
+                <pre><code>document.querySelector("#mensaje").textContent =
+"Hola desde JavaScript";</code></pre>
+
+            </div>
+
+            <div class="codigo-box">
+
+                <h3>jQuery</h3>
+
+                <pre><code>$("#mensaje").text("Hola desde jQuery");</code></pre>
+
+            </div>
+
+        </section>
+
+
+        <!-- ANIMACIONES -->
+        <section class="section">
+
+            <h2>Animaciones con jQuery</h2>
+
+            <div class="imagen-seccion">
+
+                <!-- TERCERA IMAGEN -->
+                <div>
+                    <img
+                        src="imagenes/animacion.avif"
+                        alt="Animaciones con jQuery"
+                    >
+                </div>
+
+                <div class="imagen-seccion-texto">
+
+                    <p>
+                        jQuery incluye métodos que permiten crear
+                        animaciones de manera sencilla.
+                    </p>
+
+                    <p>
+                        Dos ejemplos conocidos son
+                        <strong>fadeIn()</strong> y
+                        <strong>slideToggle()</strong>.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- EJEMPLO FADEIN -->
+        <section class="demo-jquery">
+
+            <h3>Ejemplo práctico: fadeIn()</h3>
+
+            <p>
+                El método <strong>fadeIn()</strong> permite mostrar
+                un elemento utilizando una transición de aparición.
+            </p>
+
+            <div id="cajaFade" class="caja-demo">
+                ¡Hola! Esta caja puede aparecer y desaparecer.
+            </div>
+
+            <button class="demo-button" onclick="mostrarCaja()">
+                Mostrar
+            </button>
+
+            <button class="demo-button" onclick="ocultarCaja()">
+                Ocultar
+            </button>
+
+            <pre><code>$("#cajaFade").fadeIn();
+$("#cajaFade").fadeOut();</code></pre>
+
+        </section>
+
+
+        <!-- EJEMPLO SLIDETOGGLE -->
+        <section class="demo-jquery">
+
+            <h3>Ejemplo práctico: slideToggle()</h3>
+
+            <p>
+                El método <strong>slideToggle()</strong> permite mostrar
+                u ocultar un elemento utilizando un efecto de desplazamiento.
+            </p>
+
+            <div id="cajaSlide" class="caja-demo">
+                Este contenido se puede mostrar y ocultar.
+            </div>
+
+            <button class="demo-button" onclick="alternarCaja()">
+                Probar slideToggle
+            </button>
+
+            <pre><code>$("#cajaSlide").slideToggle();</code></pre>
+
+        </section>
+
+
+        <!-- RECURSOS -->
+        <section class="recursos-jquery">
+
+            <h3>Recursos / Bibliografía</h3>
+
+            <ul>
+                <li>jQuery Documentation</li>
+                <li>MDN Web Docs - JavaScript</li>
+                <li>W3Schools - jQuery</li>
+            </ul>
+
+        </section>
+
+    </main>
+
+
+    <!-- PIE DE PÁGINA -->
+    <footer>
+        <p>© 2026 LumiCare - Tecnología para el bienestar</p>
+    </footer>
+
+
+    <!-- JQUERY -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+
+    <!-- EJEMPLOS -->
+    <script>
+
+        function mostrarCaja() {
+            $("#cajaFade").fadeIn(600);
+        }
+
+        function ocultarCaja() {
+            $("#cajaFade").fadeOut(600);
+        }
+
+        function alternarCaja() {
+            $("#cajaSlide").slideToggle(600);
+        }
+
+    </script>
+
+</body>
+</html>
